@@ -33,7 +33,7 @@ fourthBtn.addEventListener("click", () => {
 });
 
 fifthBtn.addEventListener("click", () => {
-  pdfIframe.src = "Praktikumsreise-Ende.pdf";
+  pdfIframe.src = "Praktikumsreise-ende.pdf";
   console.log("PDF 5 geladen");
   pdfIframe.style.display = "block"; // Iframe anzeigen, wenn PDF geladen wird
 });
