@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SparkPay – Online Banking Simulator</title>
+  <link rel="stylesheet" href="sparky.css">
+</head>
+<body>
+
+  <header>
+    <h1>SparkPay Web-Banking</h1>
+  </header>
+
+  <main class="sparkpay-container">
+
+    <!-- BEREICH 1: REGISTRIERUNG & LOGIN -->
+    <div id="auth-section" class="card">
+      <h2>Willkommen bei SparkPay</h2>
+      <p>Bitte erstelle ein Konto oder melde dich an.</p>
+      
+      <div class="auth-box">
+        <h3>Registrieren</h3>
+        <input type="text" id="reg-name" placeholder="Name">
+        <input type="password" id="reg-pass" placeholder="Passwort">
+        <button onclick="registrieren()">Konto erstellen</button>
+      </div>
+
+      <hr>
+
+      <div class="auth-box">
+        <h3>Anmelden</h3>
+        <input type="text" id="login-name" placeholder="Name">
+        <input type="password" id="login-pass" placeholder="Passwort">
+        <button onclick="anmelden()">Einloggen</button>
+      </div>
+      
+      <p id="auth-message" class="message"></p>
+    </div>
+
+    <!-- BEREICH 2: MAIN DASHBOARD (Erst sichtbar nach Login) -->
+    <div id="dashboard-section" class="card hidden">
+      <div class="dashboard-header">
+        <h2>Hallo, <span id="user-display-name"></span>!</h2>
+        <button class="btn-logout" onclick="abmelden()">Abmelden</button>
+      </div>
+
+      <!-- KONTOSTAND ANZEIGE -->
+      <div class="accounts-grid">
+        <div class="account-card">
+          <h4>Konto A</h4>
+          <p class="balance"><span id="balance-a">0.00</span> €</p>
+        </div>
+        <div class="account-card">
+          <h4>Konto B</h4>
+          <p class="balance"><span id="balance-b">0.00</span> €</p>
+        </div>
+      </div>
+
+      <!-- AKTIONEN -->
+      <div class="actions-grid">
+        <!-- Einzahlen / Abheben -->
+        <div class="action-card">
+          <h3>Einzahlen / Abheben</h3>
+          <select id="action-konto">
+            <option value="KontoA">Konto A</option>
+            <option value="KontoB">Konto B</option>
+          </select>
+          <input type="number" id="action-amount" placeholder="Betrag in €" step="0.01">
+          <button onclick="einzahlen()">Einzahlen</button>
+          <button onclick="abheben()" class="btn-secondary">Abheben</button>
+        </div>
+
+        <!-- Überweisen -->
+        <div class="action-card">
+          <h3>Geld überweisen (0,50€ Gebühr)</h3>
+          <label>Von Konto:</label>
+          <select id="transfer-from">
+            <option value="KontoA">Konto A</option>
+            <option value="KontoB">Konto B</option>
+          </select>
+
+          <label>An Empfänger:</label>
+          <select id="transfer-target-user"></select>
+
+          <label>Auf Empfänger-Konto:</label>
+          <select id="transfer-to">
+            <option value="KontoA">Konto A</option>
+            <option value="KontoB">Konto B</option>
+          </select>
+
+          <input type="number" id="transfer-amount" placeholder="Betrag in €" step="0.01">
+          <button onclick="ueberweisen()">Jetzt überweisen</button>
+        </div>
+      </div>
+
+      <p id="dashboard-message" class="message"></p>
+
+      <!-- TRANSAKTIONSLOG -->
+      <div class="log-box">
+        <h3>Transaktionsverlauf</h3>
+        <textarea id="translog-view" readonly rows="6"></textarea>
+      </div>
+    </div>
+
+  </main>
+  <div>
+  <p id="kommentar">Diese Web Version ist von KI erstellt worden. Der Inhalt wurde von mir in der Programmiersprache Java erstellt, 
+    jedoch durch Zeitdruck mit KI in JavaScript umgesetzt. Die KI hat zudem die Benutzeroberfläche gestaltet, meine 
+    Benutzeroberfläche, die ich im Praktikum entwickelt habe, benutzte die Swing-Bibliothek, beziehungsweise die JOptionPane Funktion.</p></div>
+  <script src="sparkpay.js"></script>
+</body>
+</html>

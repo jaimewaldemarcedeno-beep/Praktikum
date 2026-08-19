@@ -1,0 +1,66 @@
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.sparkpay-container {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.hidden { display: none; }
+
+.auth-box input, .action-card input, .action-card select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+button:hover { background-color: #003d80; }
+.btn-secondary { background-color: #6c757d; }
+.btn-logout { background-color: #dc3545; float: right; }
+
+.accounts-grid, .actions-grid {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.account-card, .action-card {
+  flex: 1;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.balance { font-size: 1.5em; font-weight: bold; color: #28a745; }
+.message { color: #d9534f; font-weight: bold; margin-top: 10px; }
+.log-box textarea { width: 100%; resize: vertical; }
+
+#kommentar {
+  width: 65%;
+  margin: 10px auto 10px auto;
+  text-align: center;
+}
