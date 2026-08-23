@@ -8,6 +8,10 @@ body{
     margin: 0 auto ;
     padding: 8%;
 }
+.quellen_liste {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 a {
     text-decoration: none;
     color: #000;
