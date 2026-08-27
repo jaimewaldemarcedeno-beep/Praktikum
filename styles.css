@@ -115,3 +115,46 @@ p, a {
     margin: 5px auto;
 
 }
+@media (max-width: 768px) {            /*Greift auf geräte unter 768px zu*/
+  
+  body {
+    padding: 15px;
+  }
+
+  .Ueberschrift {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  p, a, .cell {
+    font-size: 1.1rem;
+  }
+
+  .table-box {
+    border-radius: 6px;
+  }
+
+  .cell {
+    min-width: 200px;
+    padding: 8px;
+  }
+
+  .label-cell {
+    min-width: 120px; 
+    font-size: 1rem;
+  }
+
+  
+  .pdf-iframe {
+    height: 400px; /* Etwas weniger hoch, damit man auf dem Handy besser navigiert */
+  }
+
+  
+  #ende {
+    margin-top: 60px;
+  }
+
+  .underline {
+    margin: 25px 0;
+  }
+}
