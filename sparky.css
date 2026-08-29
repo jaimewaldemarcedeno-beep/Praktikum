@@ -88,3 +88,44 @@ i {
   text-align: center;
   font-size: 1.3rem;
 }
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .sparkpay-container {
+    margin: 10px auto;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .accounts-grid, 
+  .actions-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .btn-logout {
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .underline {
+    margin: 25px 0;
+  }
+
+  .anker {
+    margin-bottom: 25px;
+  }
+
+  #kommentar {
+    width: 90%;
+  }
+}
